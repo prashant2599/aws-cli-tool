@@ -1,6 +1,6 @@
 import boto3
 
-def list_vpc(region_name):
+def vpc(region_name):
     ec2 = boto3.client('ec2', region_name=region_name)
     vpcs = ec2.describe_vpcs()
     vpc_info = []
@@ -16,7 +16,7 @@ def list_vpc(region_name):
 region = input("Enter the AWS region (e.g., us-east-1): ").strip()
 
 try:
-    vpcs = list_vpc(region)
+    vpcs = vpc(region)
 
     if vpcs:
         print(f"\nVPCs in region '{region}':")

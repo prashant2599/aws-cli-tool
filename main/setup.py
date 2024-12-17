@@ -2,6 +2,7 @@ import boto3
 import os
 import sys
 
+
 #configure aws
 def setup():
     print("--CONFIGURE AWS")
